@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->chooseImage->setStyleSheet("background-color: black;color:white;border:1px solid white;border-radius:25px;width:100px;height:50px;");
     ui->stopBtn->setStyleSheet("background-color: red;color:white;border:1px solid red;width:100px;height:50px;");
     ui->startBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;");
-    ui->saveBtn->setStyleSheet("background-color: black;color:white;border:1px solid white;");
+    ui->saveBtn->setStyleSheet("background-color: yellow;color:black;border:1px solid white;width:100px;height:50px;");
     ui->comboBox->setStyleSheet("background-color: black;color:white;border:1px solid white;");
     ui->imageLable->setStyleSheet("background-color: black;color:white;border:1px solid white;");
 
