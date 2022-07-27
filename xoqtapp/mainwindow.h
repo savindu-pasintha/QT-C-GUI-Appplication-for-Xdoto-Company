@@ -34,6 +34,8 @@ private slots:
 
     void on_backBtn_clicked();
 
+    void on_generateReportBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     //load externl page

@@ -16,7 +16,7 @@ NextWindow1::NextWindow1(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setStyleSheet("background-color: white;color:black;border:none;");
-    ui->ckBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;");
+    ui->sampleCaptureBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;");
 }
 
 NextWindow1::~NextWindow1()
@@ -26,8 +26,41 @@ NextWindow1::~NextWindow1()
 
 
 
-void NextWindow1::on_ckBtn_clicked()
+
+
+
+
+void NextWindow1::on_sampleCaptureBtn_clicked()
 {
-     std::cout << "Can not load selected image !";
+    sampleCaptureScreen = new SampleCaptureScreen(this);
+    sampleCaptureScreen->show();
+}
+
+
+void NextWindow1::on_menuBtn_clicked()
+{
+    menuScreenload=new MenuScreen(this);
+    menuScreenload->show();
+}
+
+
+void NextWindow1::on_lablePasterBtn_clicked()
+{
+    labelPlasterCalibrationScreen=new LablePasterCalibrationScreen(this);
+    labelPlasterCalibrationScreen->show();
+}
+
+
+void NextWindow1::on_encoderBtn_clicked()
+{
+   encoderCAlibrationScreen=new EncoderCalibrationScreen(this);
+   encoderCAlibrationScreen->show();
+}
+
+
+void NextWindow1::on_cameraBtn_clicked()
+{
+  cameraLightningCalibrationScreen=new CameraCalibrationScreen(this);
+  cameraLightningCalibrationScreen->show();
 }
 

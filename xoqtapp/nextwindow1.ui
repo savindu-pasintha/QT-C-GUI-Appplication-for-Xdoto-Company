@@ -19,14 +19,42 @@
      <x>40</x>
      <y>100</y>
      <width>341</width>
-     <height>80</height>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="ckBtn">
+     <widget class="QPushButton" name="sampleCaptureBtn">
       <property name="text">
-       <string>PushButton</string>
+       <string>sample capture screen</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="menuBtn">
+      <property name="text">
+       <string>Menu Screen</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="lablePasterBtn">
+      <property name="text">
+       <string>Lable Paster Calibration</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="encoderBtn">
+      <property name="text">
+       <string>Encoder Calibration</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cameraBtn">
+      <property name="text">
+       <string>Camera ligthning Calibration</string>
       </property>
      </widget>
     </item>

@@ -230,3 +230,10 @@ void MainWindow::on_backBtn_clicked()
     defectDetectionDialogScreen->show();
 }
 
+
+void MainWindow::on_generateReportBtn_clicked()
+{
+    nextWindow1Load=new NextWindow1(this);
+    nextWindow1Load->show();
+}
+

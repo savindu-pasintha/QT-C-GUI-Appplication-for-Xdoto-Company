@@ -23,7 +23,11 @@ class Ui_NextWindow1
 public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QPushButton *ckBtn;
+    QPushButton *sampleCaptureBtn;
+    QPushButton *menuBtn;
+    QPushButton *lablePasterBtn;
+    QPushButton *encoderBtn;
+    QPushButton *cameraBtn;
 
     void setupUi(QDialog *NextWindow1)
     {
@@ -32,14 +36,34 @@ public:
         NextWindow1->resize(1366, 768);
         verticalLayoutWidget = new QWidget(NextWindow1);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(40, 100, 341, 80));
+        verticalLayoutWidget->setGeometry(QRect(40, 100, 341, 151));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        ckBtn = new QPushButton(verticalLayoutWidget);
-        ckBtn->setObjectName(QString::fromUtf8("ckBtn"));
+        sampleCaptureBtn = new QPushButton(verticalLayoutWidget);
+        sampleCaptureBtn->setObjectName(QString::fromUtf8("sampleCaptureBtn"));
 
-        verticalLayout->addWidget(ckBtn);
+        verticalLayout->addWidget(sampleCaptureBtn);
+
+        menuBtn = new QPushButton(verticalLayoutWidget);
+        menuBtn->setObjectName(QString::fromUtf8("menuBtn"));
+
+        verticalLayout->addWidget(menuBtn);
+
+        lablePasterBtn = new QPushButton(verticalLayoutWidget);
+        lablePasterBtn->setObjectName(QString::fromUtf8("lablePasterBtn"));
+
+        verticalLayout->addWidget(lablePasterBtn);
+
+        encoderBtn = new QPushButton(verticalLayoutWidget);
+        encoderBtn->setObjectName(QString::fromUtf8("encoderBtn"));
+
+        verticalLayout->addWidget(encoderBtn);
+
+        cameraBtn = new QPushButton(verticalLayoutWidget);
+        cameraBtn->setObjectName(QString::fromUtf8("cameraBtn"));
+
+        verticalLayout->addWidget(cameraBtn);
 
 
         retranslateUi(NextWindow1);
@@ -50,7 +74,11 @@ public:
     void retranslateUi(QDialog *NextWindow1)
     {
         NextWindow1->setWindowTitle(QCoreApplication::translate("NextWindow1", "Defect Detection", nullptr));
-        ckBtn->setText(QCoreApplication::translate("NextWindow1", "PushButton", nullptr));
+        sampleCaptureBtn->setText(QCoreApplication::translate("NextWindow1", "sample capture screen", nullptr));
+        menuBtn->setText(QCoreApplication::translate("NextWindow1", "Menu Screen", nullptr));
+        lablePasterBtn->setText(QCoreApplication::translate("NextWindow1", "Lable Paster Calibration", nullptr));
+        encoderBtn->setText(QCoreApplication::translate("NextWindow1", "Encoder Calibration", nullptr));
+        cameraBtn->setText(QCoreApplication::translate("NextWindow1", "Camera ligthning Calibration", nullptr));
     } // retranslateUi
 
 };
