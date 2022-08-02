@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "defectdetectioninprogressscreen.h"
+#include "ui_defectdetectioninprogressscreen.h"
 #include <string>
 #include <iostream>
 #include <QFileDialog>
@@ -12,9 +12,8 @@
 
 using namespace std;
 
-
 // ALL THE GLOBAL DEFINITIONS
-QStringList fileNamesListMain= { "/home/savindu/Downloads/projects/photos/1.jpeg",
+QStringList fileNamesList= { "/home/savindu/Downloads/projects/photos/1.jpeg",
                         "/home/savindu/Downloads/projects/photos/2.jpg",
                         "/home/savindu/Downloads/projects/photos/3.jpg",
                         "/home/savindu/Downloads/projects/photos/4.jpg",
@@ -27,25 +26,24 @@ QStringList fileNamesListMain= { "/home/savindu/Downloads/projects/photos/1.jpeg
                         };
 
 
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+DefectDetectionInProgressScreen::DefectDetectionInProgressScreen(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::DefectDetectionInProgressScreen)
 {
     ui->setupUi(this);
-    this->setStyleSheet("background-color: black;color:white;border:none;");
+   this->setStyleSheet("background-color: black;color:white;border:none;");
 
     //for looped imagesLIst
     ui->listWidget->setViewMode(QListWidget::IconMode);
     ui->listWidget->setIconSize(QSize(150,150));
     ui->listWidget->setResizeMode(QListWidget::Fixed);//Ajust
-    for(int i=0;i<fileNamesListMain.size();i++){
-        QString path =  fileNamesListMain.at(i).toLocal8Bit().constData();
+    for(int i=0;i<fileNamesList.size();i++){
+        QString path =  fileNamesList.at(i).toLocal8Bit().constData();
         QListWidgetItem *item = new QListWidgetItem(QIcon(path),"");
         ui->listWidget->addItem(item);
     }
-    /*(for(int i=0;i<fileNamesListMain.size();i++){
-        QString path =  fileNamesListMain.at(i).toLocal8Bit().constData();
+    /*(for(int i=0;i<fileNamesList.size();i++){
+        QString path =  fileNamesList.at(i).toLocal8Bit().constData();
         QListWidgetItem *item = new QListWidgetItem(QIcon(path),"");
         ui->listWidget->addItem(item);
     }
@@ -69,21 +67,20 @@ MainWindow::MainWindow(QWidget *parent)
 
 }
 
-MainWindow::~MainWindow()
+DefectDetectionInProgressScreen::~DefectDetectionInProgressScreen()
 {
     delete ui;
 }
-
-/*QImage loadImage(QString imageFilePath){
+QImage loadImage(QString imageFilePath){
     QImage image;
     if(QString::compare(imageFilePath,QString())!=0){
          return image;
     }
 
-}*/
+}
 
 
-/*void MainWindow::on_chooseImage_clicked()
+/*void DefectDetectionInProgressScreen::on_chooseImage_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this,tr("Choose"),tr("Images (*.png *.jpg *.jpeg *.bmp *.gif *.webp)"));
         if(QString::compare(fileName,QString())!=0){
@@ -103,7 +100,7 @@ MainWindow::~MainWindow()
 */
 
 
-void MainWindow::on_startBtn_clicked()
+void DefectDetectionInProgressScreen::on_startBtn_clicked()
 {
     QString fileName="/home/savindu/Downloads/projects/photos/3.jpg";
     if(QString::compare(fileName,QString())!=0){
@@ -119,7 +116,7 @@ void MainWindow::on_startBtn_clicked()
 }
 
 
-void MainWindow::on_stopBtn_clicked()
+void DefectDetectionInProgressScreen::on_stopBtn_clicked()
 {
     QString fileName="/home/savindu/Downloads/projects/photos/9.jpeg";
     if(QString::compare(fileName,QString())!=0){
@@ -141,7 +138,7 @@ void MainWindow::on_stopBtn_clicked()
 
 
 
-void MainWindow::on_comboBox_currentTextChanged(const QString &arg1)
+void DefectDetectionInProgressScreen::on_comboBox_currentTextChanged(const QString &arg1)
 {
     if(arg1 != "Select Description"){
     QMessageBox msgBox;
@@ -151,7 +148,7 @@ void MainWindow::on_comboBox_currentTextChanged(const QString &arg1)
 }
 
 
-void MainWindow::on_saveBtn_clicked()
+void DefectDetectionInProgressScreen::on_saveBtn_clicked()
 {
 
    /* QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
@@ -196,12 +193,12 @@ void MainWindow::on_saveBtn_clicked()
 
 }
 
-void MainWindow::on_listWidget_currentRowChanged(int currentRow)
+void DefectDetectionInProgressScreen::on_listWidget_currentRowChanged(int currentRow)
 {
     cout << "List Widget Item Clicked Row"<< endl;
     cout << currentRow<< endl;
 
-    QString fileName=fileNamesListMain.at(currentRow).toLocal8Bit().constData();
+    QString fileName=fileNamesList.at(currentRow).toLocal8Bit().constData();
           if(QString::compare(fileName,QString())!=0){
               QImage image;
               bool isValidImage = image.load(fileName);
@@ -212,14 +209,13 @@ void MainWindow::on_listWidget_currentRowChanged(int currentRow)
                   cout << "Can not load selected image !" << endl;
               }
           }
-
 }
 
 //https://doc.qt.io/qt-6/qmessagebox.html
 
 //description(defect)/quality/timestamp/colorCode/
 
-void MainWindow::on_backBtn_clicked()
+void DefectDetectionInProgressScreen::on_backBtn_clicked()
 {
     //close/hide current Main Window Screen
     this->close();
@@ -229,9 +225,8 @@ void MainWindow::on_backBtn_clicked()
 }
 
 
-void MainWindow::on_generateReportBtn_clicked()
+void DefectDetectionInProgressScreen::on_generateReportBtn_clicked()
 {
     nextWindow1Load=new NextWindow1(this);
-    //nextWindow1Load->show();
+    nextWindow1Load->show();
 }
-

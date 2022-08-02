@@ -3,9 +3,17 @@
 
 #include <QDialog>
 #include<QStringListModel>
+#include<enrollconfirmscreen.h>
+
+//Load existing files
+#include<existingfileloadingtest.h>
+#include<./deployed-on-server/grabconsole/ProcessTest.h>
+
 
 //Load screen
 //#include <mainwindow.h>
+#include<menuscreen.h>
+#include<enrollnewqualityscreen.h>
 
 namespace Ui {
 class EnrolementScreen;
@@ -31,6 +39,12 @@ private:
     QStringListModel *model;
     //load screen
     //MainWindow *mainWindowScreen;
+    MenuScreen *menuScreen;
+    EnrollNewQualityScreen  *enrollNewQualityScreen;
+    EnrollConfirmScreen *enrollConfirmScreen;
+    ExistingFileLoadingTest *existingFileLoadingTest;
+    ProcessTest *processTest;
+
 };
 
 #endif // ENROLEMENTSCREEN_H

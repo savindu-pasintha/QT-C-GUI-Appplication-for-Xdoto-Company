@@ -2,6 +2,7 @@
 #define LABLEPASTERCALIBRATIONSCREEN_H
 
 #include <QDialog>
+//#include<menuscreen.h>
 
 namespace Ui {
 class LablePasterCalibrationScreen;
@@ -22,6 +23,7 @@ private slots:
 
 private:
     Ui::LablePasterCalibrationScreen *ui;
+   // MenuScreen *backScreenAsaMenu;
 };
 
 #endif // LABLEPASTERCALIBRATIONSCREEN_H

@@ -7,15 +7,15 @@ MenuScreen::MenuScreen(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setStyleSheet("background-color: black;color:white;border:none;");
-    ui->mcameraLightBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:25px;");
-    ui->mencoderCalibraitionBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:25px;");
-    ui->mlabelPasterBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:25px;");
-    ui->msetThresholdBtn->setStyleSheet("background-color: orange;color:black;border:1px solid orange;width:100px;height:50px;border-radius:25px;");
-    ui->msampleGenerationBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:25px;");
-    ui->mmodeleditBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:25px;");
-    ui->mtoolBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:25px;");
+    ui->mcameraLightBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:5px;");
+    ui->mencoderCalibraitionBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:5px;");
+    ui->mlabelPasterBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:5px;");
+    ui->msetThresholdBtn->setStyleSheet("background-color: orange;color:black;border:1px solid orange;width:100px;height:50px;border-radius:5px;");
+    ui->msampleGenerationBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:5px;");
+    ui->mmodeleditBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:5px;");
+    ui->mtoolBtn->setStyleSheet("background-color: green;color:white;border:1px solid green;width:100px;height:50px;border-radius:5px;");
 
-    ui->mbackBtn->setStyleSheet("background-color: red;color:white;border:1px solid red;width:100px;height:50px;");
+    ui->mbackBtn->setStyleSheet("background-color: red;color:white;border:1px solid red;width:100px;height:50px;border-radius:5px;");
 
 }
 
@@ -72,5 +72,7 @@ void MenuScreen::on_mtoolBtn_clicked()
 void MenuScreen::on_mbackBtn_clicked()
 {
     this->close();
+   //enrolementScreenMenu=new EnrolementScreen(this);
+   //enrolementScreen->show();
 }
 

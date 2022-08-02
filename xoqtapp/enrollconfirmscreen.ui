@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EnrollConfirmScreen</class>
+ <widget class="QDialog" name="EnrollConfirmScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Confirm</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>60</y>
+     <width>531</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="ecscurrentQualityBtn">
+      <property name="text">
+       <string>Current Quality : xxxxxxxxxxx</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="confirmBtn">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>60</y>
+     <width>231</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirm</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ecsStartBtn">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>230</y>
+     <width>161</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ecsBackBtn">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>540</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

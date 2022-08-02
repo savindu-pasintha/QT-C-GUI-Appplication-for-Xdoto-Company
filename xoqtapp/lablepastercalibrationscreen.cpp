@@ -25,6 +25,7 @@ void LablePasterCalibrationScreen::on_lblpcstartBtn_clicked()
 
 void LablePasterCalibrationScreen::on_lblpcbackBtn_clicked()
 {
-
+  this->close();
+  //backScreenAsaMenu->show();
 }
 

@@ -41,5 +41,6 @@ private:
     //load externl page
     NextWindow1 *nextWindow1Load;
     DefectDetectionDialogScreen *defectDetectionDialogScreen;
+
 };
 #endif // MAINWINDOW_H

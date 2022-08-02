@@ -7,7 +7,7 @@
 #include<lablepastercalibrationscreen.h>
 #include<encodercalibrationscreen.h>
 #include<cameracalibrationscreen.h>
-//#include<nextwindow1.h>
+//#include<enrolementscreen.h>
 namespace Ui {
 class MenuScreen;
 }
@@ -41,8 +41,8 @@ private:
     Ui::MenuScreen *ui;
     ///load screen to assign pointer variable
     SampleCaptureScreen *sampleCaptureScreen;
-    MenuScreen *menuScreen;
-    //NextWindow1 *nextWindow1Screen2;
+    //MenuScreen *menuScreen;
+   // EnrolementScreen *enrolementScreen;
     LablePasterCalibrationScreen *labelPlasterCalibrationScreen;
     EncoderCalibrationScreen *encoderCAlibrationScreen;
     CameraCalibrationScreen *cameraLightningCalibrationScreen;

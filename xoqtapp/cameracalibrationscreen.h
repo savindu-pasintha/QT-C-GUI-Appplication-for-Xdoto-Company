@@ -15,6 +15,13 @@ public:
     explicit CameraCalibrationScreen(QWidget *parent = nullptr);
     ~CameraCalibrationScreen();
 
+private slots:
+    void on_ccsbackBtn_clicked();
+
+    void on_ccssaveBtn_clicked();
+
+    void on_ccsrecalibrateBtn_clicked();
+
 private:
     Ui::CameraCalibrationScreen *ui;
 };

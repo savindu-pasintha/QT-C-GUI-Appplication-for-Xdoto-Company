@@ -15,6 +15,9 @@ public:
     explicit EncoderCalibrationScreen(QWidget *parent = nullptr);
     ~EncoderCalibrationScreen();
 
+private slots:
+    void on_encsbackBtn_clicked();
+
 private:
     Ui::EncoderCalibrationScreen *ui;
 };

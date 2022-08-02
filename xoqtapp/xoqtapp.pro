@@ -11,31 +11,49 @@ CONFIG += c++17
 SOURCES += \
     cameracalibrationscreen.cpp \
     defectdetectiondialogscreen.cpp \
+    defectdetectioninprogressscreen.cpp \
+    editsegmentscreen.cpp \
     encodercalibrationscreen.cpp \
     enrolementscreen.cpp \
+    enrollconfirmscreen.cpp \
+    enrollnewqualityscreen.cpp \
+    existingfileloadingtest.cpp \
     lablepastercalibrationscreen.cpp \
     main.cpp \
     mainwindow.cpp \
     menuscreen.cpp \
     nextwindow1.cpp \
-    samplecapturescreen.cpp
+    qlablemouseevent.cpp \
+    samplecapturescreen.cpp \
+    ./deployed-on-server/grabconsole/ProcessTest.cpp
 
 HEADERS += \
     cameracalibrationscreen.h \
     defectdetectiondialogscreen.h \
+    defectdetectioninprogressscreen.h \
+    editsegmentscreen.h \
     encodercalibrationscreen.h \
     enrolementscreen.h \
+    enrollconfirmscreen.h \
+    enrollnewqualityscreen.h \
+    existingfileloadingtest.h \
     lablepastercalibrationscreen.h \
     mainwindow.h \
     menuscreen.h \
     nextwindow1.h \
-    samplecapturescreen.h
+    qlablemouseevent.h \
+    samplecapturescreen.h \
+    ./deployed-on-server/grabconsole/ProcessTest.h
 
 FORMS += \
     cameracalibrationscreen.ui \
     defectdetectiondialogscreen.ui \
+    defectdetectioninprogressscreen.ui \
+    editsegmentscreen.ui \
     encodercalibrationscreen.ui \
     enrolementscreen.ui \
+    enrollconfirmscreen.ui \
+    enrollnewqualityscreen.ui \
     lablepastercalibrationscreen.ui \
     mainwindow.ui \
     menuscreen.ui \
